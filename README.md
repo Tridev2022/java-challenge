@@ -50,3 +50,27 @@ Please let us know more about your Java experience in a few sentences. For examp
 - I have 3 years experience in Java and I started to use Spring Boot from last year
 - I'm a beginner and just recently learned Spring Boot
 - I know Spring Boot very well and have been using it for many years
+
+#### 
+#### 
+#### My experience in Java
+1. I have around 8 years of experience in Java and more than 5 years of experience in spring boot.
+2. I have good experience in SQL and back-end technology. Also, some experience in front end (HTML, CSS, JS).
+3. I'm a quick learner and flexible developer, so that I can easily adopt with any technology in any situation. 
+
+#### What are the changes
+1. Added three different packages model, security and exception.
+2. Added new DTO class for Employee object to exchange the data between presentation layer and Data Access layer so that the this hides the entity object from presentation layer.
+3. Added custom exception class and its handling mechanism.
+4. Added logic for basic Auth with in-memory implementation.
+5. Added caching mechanism for API calls so that it reduce the frequent DB call.
+6. Added JUnit test cases for controller and service layers.
+
+#### What could be done in the future improvement
+1. We can add proper logging mechanism by adding logback.xml file and its log rotation.
+2. Can be improve on Authentication and Authorization of the application, like token based authentication.
+3. To support the multiple language we can improve on localization logic, so that it can helps to make the application more user friendly.
+4. We can achieve full ORM feature by using hibernate, JPA, and proper mapping.
+5. Can be implement second level cache and proper caching and its eviction mechanism (like LRU, LFU etc).
+6. Can be implement multiple data source to improve the performance of the application by fetching the data from MASTER/SLAVE concept for lazy query (reporting query) and real time query.
+

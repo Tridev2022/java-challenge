@@ -1,18 +1,48 @@
 package jp.co.axa.apidemo.services;
 
-import jp.co.axa.apidemo.entities.Employee;
-
 import java.util.List;
 
+import jp.co.axa.apidemo.model.EmployeeDto;
+
+/**
+ * Employee service layer class use for the Employee operations.
+ */
 public interface EmployeeService {
 
-    public List<Employee> retrieveEmployees();
+	/**
+	 * This method returns all employee records from database.
+	 *
+	 * @return the list
+	 */
+	public List<EmployeeDto> retrieveEmployees();
 
-    public Employee getEmployee(Long employeeId);
+	/**
+	 * This method fetch the employee records from database by given employee id.
+	 *
+	 * @param employeeId the employee id
+	 * @return the employee
+	 */
+	public EmployeeDto getEmployee(Long employeeId);
 
-    public void saveEmployee(Employee employee);
+	/**
+	 * This method inserting the employee records to the database.
+	 *
+	 * @param employeeDto the employee dto
+	 */
+	public void saveEmployee(EmployeeDto employeeDto);
 
-    public void deleteEmployee(Long employeeId);
+	/**
+	 * This method removing the employee record from database.
+	 *
+	 * @param employeeId the employee id
+	 */
+	public void deleteEmployee(Long employeeId);
 
-    public void updateEmployee(Employee employee);
+	/**
+	 * This method updating the existing employee details in the database.
+	 *
+	 * @param employeeDto the employee dto
+	 * @param employeeId  the employee id
+	 */
+	public void updateEmployee(EmployeeDto employeeDto, Long employeeId);
 }

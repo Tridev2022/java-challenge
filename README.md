@@ -73,4 +73,5 @@ Please let us know more about your Java experience in a few sentences. For examp
 4. We can achieve full ORM feature by using hibernate, JPA, and proper mapping.
 5. Can be implement second level cache and proper caching and its eviction mechanism (like LRU, LFU etc).
 6. Can be implement multiple data source to improve the performance of the application by fetching the data from MASTER/SLAVE concept for lazy query (reporting query) and real time query.
+7. I have fixed some blocker issues using SonarLint, in the future we could continue sonarlint to improve the code quality by fixing/avoiding the major and minor issues.
 

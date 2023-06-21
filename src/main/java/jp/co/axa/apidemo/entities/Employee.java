@@ -3,6 +3,7 @@ package jp.co.axa.apidemo.entities;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.experimental.Tolerate;
 
 import java.math.BigDecimal;
 
@@ -33,4 +34,8 @@ public class Employee {
 	@Column(name = "DEPARTMENT")
 	private String department;
 
+	@Tolerate
+	public Employee() {
+	}
+	
 }

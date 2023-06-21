@@ -13,12 +13,25 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+	
+	private static final String[] AUTH_WHITELIST = {
+            //Swagger UI v2
+            "/v2/api-docs",
+            "/swagger-resources",
+            "/swagger-resources/**",
+            "/configuration/ui",
+            "/configuration/security",
+            "/swagger-ui.html",
+            "/webjars/**",
+            "/h2-console/**"
+    };
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
 		http.csrf().disable().authorizeRequests()
-				.antMatchers("/v1/api-docs/*", "/swagger-ui.html", "/swagger-resources/**").permitAll().and()
+				.antMatchers(AUTH_WHITELIST).permitAll().and()
+		        .headers().frameOptions().sameOrigin().and()
 				.authorizeRequests().anyRequest().authenticated().and().httpBasic();
 	}
 
